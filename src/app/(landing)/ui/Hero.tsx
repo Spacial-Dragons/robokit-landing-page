@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
@@ -15,7 +13,7 @@ export const Hero = () => {
   >([]);
 
   useEffect(() => {
-    const newStars = Array.from({ length: 100 }, () => ({
+    const newStars = Array.from({ length: 150 }, () => ({
       top: Math.random() * 100,
       size: 2 + Math.random() * 4,
       left: Math.random() * 100,
@@ -31,13 +29,15 @@ export const Hero = () => {
           key={idx}
           className="absolute bg-white/50 animate-twinkle"
           style={{
-            top: `${star.top}%`, // Random Y position from 0 to 100%
-            left: `${star.left}%`, // Random X position from 0 to 100%
-            width: `${star.size}px`, // Random size for each pixel-art star
+            top: `${star.top}%`,
+            left: `${star.left}%`,
+            width: `${star.size}px`,
             height: `${star.size}px`,
-            animationDelay: `${star.delay}s`, // Add delay to stagger the start
-            filter: "blur(0px)", // No blur for sharp edges
-            boxShadow: `0 0 5px rgba(255, 255, 255, 0.8)`, // Slight glow effect
+            animationDelay: `${star.delay}s`,
+            filter: "blur(0px)",
+            boxShadow: `0 0 5px rgba(255, 255, 255, 0.8)`,
+            transitionProperty: "all",
+            transitionDuration: "3s",
           }}
         />
       ))}

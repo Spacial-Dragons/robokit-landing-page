@@ -18,22 +18,22 @@ body {
 
 @keyframes twinkle {
   0% {
-    opacity: 0.3;
+    opacity: 0;
   }
   25% {
-    opacity: 1;
-  }
-  50% {
     opacity: 0.5;
   }
-  75% {
+  50% {
     opacity: 1;
   }
-  100% {
+  75% {
     opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 .animate-twinkle {
-  animation: twinkle 3s infinite ease-in-out;
+  animation: twinkle 3s infinite ease-in-out both;
 }
