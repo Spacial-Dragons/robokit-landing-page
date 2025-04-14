@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Github } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
@@ -23,7 +25,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[calc(100vh-64px)] flex justify-center items-center overflow-hidden bg-black text-white">
+    <div className="relative h-[calc(100vh-64px)] flex flex-col gap-10 justify-center items-center overflow-hidden bg-black text-white p-5">
       {stars.map((star, idx) => (
         <div
           key={idx}
@@ -42,9 +44,18 @@ export const Hero = () => {
         />
       ))}
 
-      <h1 className="text-4xl font-semibold text-center z-10">
-        The Swift Framework to Control Robots
+      <h1 className="text-6xl font-semibold text-center z-10">
+        The Swift Framework to control Robots
       </h1>
+
+      <div className="flex gap-4">
+        <Button variant="secondary" size="lg">
+          Documentation
+        </Button>
+        <Button variant="outline" size="lg">
+          <Github /> Source code
+        </Button>
+      </div>
     </div>
   );
 };
