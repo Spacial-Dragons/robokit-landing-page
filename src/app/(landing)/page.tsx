@@ -1,5 +1,4 @@
-import { Features } from "./ui/Features";
-import { Hero } from "./ui/Hero";
+import { Features, Hero, PoweredBy } from "./ui";
 
 export default function Home() {
   return (
@@ -7,6 +6,8 @@ export default function Home() {
       <Hero />
 
       <Features />
+
+      <PoweredBy />
     </div>
   );
 }

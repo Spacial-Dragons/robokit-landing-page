@@ -1,4 +1,4 @@
-import { Navbar } from "./ui/Navbar";
+import { Footer, Navbar } from "./ui/";
 
 export default function LandingLayout({
   children,
@@ -10,6 +10,10 @@ export default function LandingLayout({
       <Navbar />
 
       {children}
+
+      <div className="pt-20">
+        <Footer />
+      </div>
     </div>
   );
 }

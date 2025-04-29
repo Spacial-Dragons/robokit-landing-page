@@ -6,21 +6,18 @@ const features = [
     title: "Built for Developers",
     description:
       "Clean, extensible code with modern tooling for a seamless dev experience.",
-    hoverShadow: "hover:shadow-[0_0_25px_#E592FB]",
   },
   {
     icon: <Handshake size={64} />,
     title: "Seamless Integration",
     description:
       "Easily connects with your existing tools, APIs, and workflows.",
-    hoverShadow: "hover:shadow-[0_0_25px_#0066FF]",
   },
   {
     icon: <PersonStanding size={64} />,
     title: "Human-Centered Design",
     description:
       "Crafted with a focus on usability, accessibility, and real user needs.",
-    hoverShadow: "hover:shadow-[0_0_25px_#A500F9]",
   },
 ];
 
@@ -30,7 +27,7 @@ export const Features = () => {
       {features.map((feature) => (
         <div
           key={feature.title}
-          className={`flex flex-col gap-10 items-center border border-white/20 rounded-lg p-10 transition-all hover:bg-card-hover ${feature.hoverShadow}`}
+          className={`flex flex-col gap-10 items-center border border-white/20 rounded-lg p-10 transition-all hover:bg-card-hover hover:shadow-robokit-blue hover:shadow-[0_0_25px]`}
         >
           {feature.icon}
 

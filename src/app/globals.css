@@ -41,6 +41,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --font-space: var(--font-space-grotesk);
+  --color-robokit-blue: #4264f6;
 }
 
 :root {
@@ -107,4 +108,83 @@
 
 .animate-twinkle {
   animation: twinkle 3s infinite ease-in-out both;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+
+.animate-card {
+  position: relative;
+}
+
+@keyframes animate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.animate-card::before,
+.animate-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  box-sizing: initial;
+  padding: 3px;
+  border-radius: 10px;
+  background: conic-gradient(from var(--angle), orange, blue, red, orange);
+  animation: animate 3s linear infinite;
+  z-index: -1;
+}
+
+.animate-card::before {
+  filter: blur(0.5rem);
+  opacity: 0.5;
+}
+
+.animate-card-orange::before,
+.animate-card-orange::after,
+.animate-card-blue::before,
+.animate-card-blue::after,
+.animate-card-red::before,
+.animate-card-red::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  box-sizing: initial;
+  padding: 3px;
+  border-radius: 10px;
+  animation: animate 3s linear infinite;
+  z-index: -1;
+  background: conic-gradient(from var(--angle), transparent 70%, COLOR);
+}
+
+.animate-card-orange::before {
+  background: conic-gradient(from var(--angle), transparent 70%, orange);
+  animation-delay: 1s;
+  filter: blur(0.5rem);
+  opacity: 0.5;
+}
+
+.animate-card-blue::before {
+  background: conic-gradient(from var(--angle), transparent 70%, blue);
+  filter: blur(0.5rem);
+  opacity: 0.5;
+}
+
+.animate-card-red::before {
+  background: conic-gradient(from var(--angle), transparent 70%, red);
+  animation-delay: 2s;
+  filter: blur(0.5rem);
+  opacity: 0.5;
 }
