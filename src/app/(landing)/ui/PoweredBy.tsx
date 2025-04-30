@@ -1,23 +1,25 @@
+import { CPU, Swift, VisionPro } from "@/icons/";
+
 const techs = [
   {
     name: "Swift",
-    icon: "/icons/swift.svg",
+    icon: <Swift />,
     url: "https://developer.apple.com/swift/",
     desc: "A powerful programming language for building apps on Apple platforms.",
     gradient: "animate-card-orange",
   },
   {
     name: "visionOS",
-    icon: "/icons/visionos.svg",
+    icon: <VisionPro />,
     url: "https://developer.apple.com/visionos/",
     desc: "The spatial operating system for Apple Vision Pro apps.",
     gradient: "animate-card-blue",
   },
   {
-    name: "OpenAI",
-    icon: "/icons/openai.svg",
+    name: "ROS",
+    icon: <CPU />,
     url: "https://openai.com",
-    desc: "AI services for natural language understanding and generation.",
+    desc: "ROS text description.",
     gradient: "animate-card-red",
   },
 ];
@@ -36,9 +38,11 @@ export const PoweredBy = () => {
             href={tech.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`animate-card bg-black group p-6 rounded-xl border border-white/20 w-full max-w-sm ${tech.gradient}`}
+            className={`animate-card bg-black group p-6 rounded-xl border border-white/20 w-full max-w-sm ${tech.gradient} space-y-2.5`}
           >
-            <div className="flex items-center gap-4 mb-3">
+            <div className="w-10">{tech?.icon}</div>
+
+            <div className="flex items-center">
               <h4 className="text-lg font-semibold group-hover:underline">
                 {tech.name}
               </h4>

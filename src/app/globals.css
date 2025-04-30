@@ -134,17 +134,24 @@
   height: 100%;
   top: 50%;
   left: 50%;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%);
   box-sizing: initial;
   padding: 3px;
   border-radius: 10px;
-  background: conic-gradient(from var(--angle), orange, blue, red, orange);
+  background: conic-gradient(
+    from var(--angle),
+    #f05138,
+    var(--color-robokit-blue),
+    red,
+    #f05138
+  );
   animation: animate 3s linear infinite;
   z-index: -1;
 }
 
 .animate-card::before {
   filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
   opacity: 0.5;
 }
 
@@ -160,7 +167,7 @@
   height: 100%;
   top: 50%;
   left: 50%;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%);
   box-sizing: initial;
   padding: 3px;
   border-radius: 10px;
@@ -170,15 +177,21 @@
 }
 
 .animate-card-orange::before {
-  background: conic-gradient(from var(--angle), transparent 70%, orange);
+  background: conic-gradient(from var(--angle), transparent 70%, #f05138);
   animation-delay: 1s;
   filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
   opacity: 0.5;
 }
 
 .animate-card-blue::before {
-  background: conic-gradient(from var(--angle), transparent 70%, blue);
+  background: conic-gradient(
+    from var(--angle),
+    transparent 70%,
+    var(--color-robokit-blue)
+  );
   filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
   opacity: 0.5;
 }
 
@@ -186,5 +199,6 @@
   background: conic-gradient(from var(--angle), transparent 70%, red);
   animation-delay: 2s;
   filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
   opacity: 0.5;
 }
