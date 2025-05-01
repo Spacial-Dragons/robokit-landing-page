@@ -28,7 +28,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[calc(100vh-64px)] flex flex-col gap-10 justify-center items-center overflow-hidden bg-background p-5">
+    <div className="relative h-[calc(100svh-64px)] flex flex-col gap-10 justify-center items-center overflow-hidden bg-background p-5">
       {stars.map((star, idx) => (
         <div
           key={idx}
