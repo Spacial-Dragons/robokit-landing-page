@@ -63,8 +63,10 @@ export default function RootLayout({
         >
           {children}
 
-          <div className="fixed bottom-5 right-5">
-            <ThemeToggler />
+          <div className="fixed bottom-5 w-full">
+            <div className="max-w-7xl mx-auto w-full flex justify-end px-5">
+              <ThemeToggler />
+            </div>
           </div>
         </ThemeProvider>
       </body>
