@@ -27,7 +27,7 @@ export const Features = () => {
       {features.map((feature) => (
         <div
           key={feature.title}
-          className={`flex flex-col gap-10 items-center border border-white/20 rounded-lg p-10 transition-all hover:bg-card-hover hover:shadow-robokit-blue hover:shadow-[0_0_25px]`}
+          className={`flex flex-col gap-10 text-card-foreground items-center border border-border rounded-lg p-10 transition-all bg-card hover:bg-card-hover hover:shadow-robokit-blue hover:shadow-[0_0_25px]`}
         >
           {feature.icon}
 

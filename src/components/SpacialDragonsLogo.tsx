@@ -8,6 +8,7 @@ export const SpacialDragonsLogo = () => {
       width={0}
       height={0}
       style={{ width: "40px", height: "auto" }}
+      className="invert dark:invert-0"
     />
   );
 };

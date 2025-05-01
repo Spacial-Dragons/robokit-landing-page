@@ -2,9 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
+  const { theme } = useTheme();
+
   const [stars, setStars] = useState<
     {
       top: number;
@@ -25,11 +28,11 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[calc(100vh-64px)] flex flex-col gap-10 justify-center items-center overflow-hidden bg-black text-white p-5">
+    <div className="relative h-[calc(100vh-64px)] flex flex-col gap-10 justify-center items-center overflow-hidden bg-background p-5">
       {stars.map((star, idx) => (
         <div
           key={idx}
-          className="absolute bg-white/50 animate-twinkle"
+          className="absolute bg-foreground/50 animate-twinkle"
           style={{
             top: `${star.top}%`,
             left: `${star.left}%`,
@@ -37,7 +40,10 @@ export const Hero = () => {
             height: `${star.size}px`,
             animationDelay: `${star.delay}s`,
             filter: "blur(0px)",
-            boxShadow: `0 0 5px rgba(255, 255, 255, 0.8)`,
+            boxShadow:
+              theme === "dark"
+                ? `0 0 5px rgba(255, 255, 255, 0.8)`
+                : `0 0 5px rgba(0, 0, 0, 0.8)`,
             transitionProperty: "all",
             transitionDuration: "3s",
           }}
@@ -49,9 +55,10 @@ export const Hero = () => {
       </h1>
 
       <div className="flex gap-4">
-        <Button variant="secondary" size="lg" className="">
+        <Button size="lg" className="">
           Documentation
         </Button>
+
         <Button variant="outline" size="lg">
           <Github /> Source code
         </Button>

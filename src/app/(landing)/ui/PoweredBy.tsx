@@ -20,14 +20,14 @@ const techs = [
     icon: <CPU />,
     url: "https://openai.com",
     desc: "ROS text description.",
-    gradient: "animate-card-red",
+    gradient: "animate-card-green",
   },
 ];
 
 export const PoweredBy = () => {
   return (
     <div className="px-5 space-y-10">
-      <div className="animate-card w-fit mx-auto rounded-lg bg-zinc-900 px-6 py-3 text-xl font-bold">
+      <div className="animate-card w-fit mx-auto rounded-lg bg-secondary text-secondary-foreground px-6 py-3 text-xl font-bold">
         Powered By
       </div>
 
@@ -38,7 +38,7 @@ export const PoweredBy = () => {
             href={tech.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`animate-card bg-black group p-6 rounded-xl border border-white/20 w-full max-w-sm ${tech.gradient} space-y-2.5`}
+            className={`animate-card bg-card group p-6 rounded-xl border border-border w-full max-w-sm ${tech.gradient} space-y-2.5`}
           >
             <div className="w-10">{tech?.icon}</div>
 

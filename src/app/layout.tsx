@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
+import { ThemeProvider, ThemeToggler } from "@/components";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -52,8 +53,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${spaceGrotesk.variable} antialiased`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${spaceGrotesk.variable} antialiased relative`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+
+          <div className="fixed bottom-5 right-5">
+            <ThemeToggler />
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
