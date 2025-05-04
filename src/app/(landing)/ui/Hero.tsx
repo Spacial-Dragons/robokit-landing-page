@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
@@ -28,7 +29,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[calc(100svh-64px)] flex flex-col gap-10 justify-center items-center overflow-hidden bg-background p-5">
+    <div className="relative h-[calc(100dvh-64px)] flex flex-col gap-10 justify-center items-center overflow-hidden bg-background p-5">
       {stars.map((star, idx) => (
         <div
           key={idx}
@@ -55,13 +56,17 @@ export const Hero = () => {
       </h1>
 
       <div className="flex gap-4">
-        <Button size="lg" className="">
-          Documentation
-        </Button>
+        <Link href="/docs">
+          <Button size="lg" className="">
+            Get started
+          </Button>
+        </Link>
 
-        <Button variant="outline" size="lg">
-          <Github /> Source code
-        </Button>
+        <Link href="https://github.com/Spacial-Dragons/RoboKit" target="_blank">
+          <Button variant="outline" size="lg">
+            <Github /> Source code
+          </Button>
+        </Link>
       </div>
     </div>
   );

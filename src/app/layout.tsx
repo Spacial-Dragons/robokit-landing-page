@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
-import { ThemeProvider, ThemeToggler } from "@/components";
+import { Footer, Navbar, ThemeProvider, ThemeToggler } from "@/components";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -61,7 +61,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar />
+
+          <div className="min-h-svh">{children}</div>
+
+          <div className="pt-20">
+            <Footer />
+          </div>
 
           <div className="fixed bottom-5 w-full">
             <div className="max-w-7xl mx-auto w-full flex justify-end px-5">
