@@ -31,7 +31,7 @@ export const PoweredBy = () => {
         Powered By
       </div>
 
-      <div className="flex flex-wrap justify-center gap-8 px-4">
+      <div className="flex flex-wrap justify-center gap-8">
         {techs.map((tech) => (
           <a
             key={tech.name}
