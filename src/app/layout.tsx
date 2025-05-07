@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Alessandra Souza da Silva",
-      url: "",
+      url: "https://www.linkedin.com/in/alelekime/",
     },
     {
       name: "Bruna Martins de Oliveira",
-      url: "",
+      url: "https://www.linkedin.com/in/broona-martinso/",
     },
     {
       name: "Edgar Vergara",
@@ -34,15 +34,15 @@ export const metadata: Metadata = {
     },
     {
       name: "Mariia Chemerys",
-      url: "",
+      url: "https://www.linkedin.com/in/mariia-chemerys-2301091a7/",
     },
     {
       name: "Matvei Novoselov",
-      url: "",
+      url: "https://www.linkedin.com/in/matt-novoselov/",
     },
     {
       name: "Sofia Diniz Melo Santos",
-      url: "",
+      url: "https://www.linkedin.com/in/sofiadiniz/",
     },
   ],
 };
