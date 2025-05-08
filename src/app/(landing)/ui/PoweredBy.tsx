@@ -16,10 +16,10 @@ const techs = [
     gradient: "animate-card-blue",
   },
   {
-    name: "ROS",
+    name: "Robotics OS",
     icon: <CPU />,
-    url: "https://openai.com",
-    desc: "ROS text description.",
+    url: "https://ros.org",
+    desc: "Compatible with your preferred robotics OS or middleware, from ROS to custom stacks.",
     gradient: "animate-card-green",
   },
 ];
